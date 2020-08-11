@@ -1,0 +1,46 @@
+
+# reconstitute sources from ocr'd pages
+$(CLEANSRCS) cleansrc : $(PAGES)
+	@echo Building clean source...
+	@r() { cat ../pages/$$1-* >$$2.clean ; } ; \
+		r e00 u0; \
+		r e01 u1; \
+		r e02 u2; \
+		r e03 u3; \
+		r e04 u4; \
+		r e05 u5; \
+		r e06 u6; \
+		r e07 u7; \
+		r e08 u8; \
+		r e09 u9; \
+		r e10 ux; \
+		r e11 sh; \
+		r e12 init
+	@touch cleansrc
+
+
+root usr protofs : $(ALLSRCS) init.0405 sh.0405
+	@echo Building filesystems...
+	@$(TREECOPY) ../fs/root .
+	@$(TREECOPY) ../fs/new/etc root
+	@$(TREECOPY) ../fs/usr .
+	@$(TREECOPY) ../fs/new/usr .
+	@$(TREECOPY) ../src usr
+	@sed '/40014/d' < sh.s > usr/src/cmd/sh.s
+	@sed '/40014/d' < init.s > usr/src/cmd/init.s
+	@cp $(KSRCS) usr/sys
+	@cp init.0405 root/etc/init
+	@cp sh.0405 root/bin/sh
+	@touch protofs
+
+rf0.dsk rk0.dsk images : protofs unix
+	@echo Building disk images...
+	@$(MKFS) -p ../fs/Readme root rf0.dsk rf
+	@$(MKFS) -p ../fs/Readme usr rk0.dsk rk
+	@dd if=../boot/bos of=rf0.dsk bs=512 seek=960
+	@# we need to skip the a.out header...
+	@dd if=unix bs=1 skip=16 count=16384 | \
+	    dd of=rf0.dsk bs=512 seek=964
+	@touch images	
+
+run.joshua

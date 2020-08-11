@@ -1,0 +1,23 @@
+PAGES = ../pages/e00-01 ../pages/e00-02 ../pages/e00-03 ../pages/e00-04 \
+	../pages/e00-05 ../pages/e00-06 ../pages/e00-07 ../pages/e00-08 \
+	../pages/e00-09 ../pages/e00-10 ../pages/e01-01 ../pages/e01-02 \
+	../pages/e01-03 ../pages/e01-04 ../pages/e01-05 ../pages/e01-06 \
+	../pages/e01-07 ../pages/e01-08 ../pages/e01-09 ../pages/e01-10 \
+	../pages/e02-01 ../pages/e02-02 ../pages/e02-03 ../pages/e02-04 \
+	../pages/e02-05 ../pages/e02-06 ../pages/e02-07 ../pages/e02-08 \
+	../pages/e02-09 ../pages/e02-10 ../pages/e03-01 ../pages/e03-02 \
+	../pages/e03-03 ../pages/e03-04 ../pages/e04-01 ../pages/e04-02 \
+	../pages/e04-03 ../pages/e04-04 ../pages/e04-05 ../pages/e04-06 \
+	../pages/e04-07 ../pages/e05-01 ../pages/e05-02 ../pages/e05-03 \
+	../pages/e05-04 ../pages/e05-05 ../pages/e05-06 ../pages/e06-01 \
+	../pages/e06-02 ../pages/e06-03 ../pages/e06-04 ../pages/e06-05 \
+	../pages/e06-06 ../pages/e07-01 ../pages/e07-02 ../pages/e07-03 \
+	../pages/e07-04 ../pages/e07-05 ../pages/e07-06 ../pages/e07-07 \
+	../pages/e07-08 ../pages/e08-01 ../pages/e08-02 ../pages/e08-03 \
+	../pages/e08-04 ../pages/e08-05 ../pages/e08-06 ../pages/e08-07 \
+	../pages/e08-08 ../pages/e08-09 ../pages/e09-01 ../pages/e09-02 \
+	../pages/e09-03 ../pages/e09-04 ../pages/e09-05 ../pages/e09-06 \
+	../pages/e09-07 ../pages/e09-08 ../pages/e10-01 ../pages/e10-02 \
+	../pages/e11-01 ../pages/e11-02 ../pages/e11-03 ../pages/e11-04 \
+	../pages/e11-05 ../pages/e11-06 ../pages/e11-07 ../pages/e12-01 \
+	../pages/e12-02 ../pages/e12-03 ../pages/e12-04
