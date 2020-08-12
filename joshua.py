@@ -23,7 +23,7 @@ typing_delay = 0.01
 
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
-engine.setProperty('voice', voices[59].id)
+engine.setProperty('voice', voices[21].id)
 engine.setProperty('rate', 230)
 
 def screen_clear():
@@ -164,16 +164,17 @@ typing_delay=0.0005
 with open('data.txt', 'r') as file:
     data = file.read()
     typing(data)
-    sleep(0.6) 
+    sleep(1.6) 
+    screen_clear()
 with open('dump.txt', 'r') as file:
     data = file.read()
     typing(data)
-    sleep(0.6)    
+    sleep(0.5)    
     screen_clear()
 with open('data2.txt', 'r') as file:
     data = file.read()
     typing(data)
-    sleep(0.6) 
+    sleep(0.8) 
 with open('dump2.txt', 'r') as file:
     data = file.read()
     typing(data)
@@ -182,10 +183,11 @@ with open('dump2.txt', 'r') as file:
 with open('data3.txt', 'r') as file:
     data = file.read()
     typing(data)
-    sleep(0.4)
+    sleep(0.8)
 
 screen_clear()
 typing_delay=0.05
+sleep(2.5)
 parallel('Greetings Professor Falken')
 
 
